@@ -1,0 +1,25 @@
+<!doctype html>
+<title>Outcome of Recommendations</title>
+<div class=page>
+  <h2>Given the ratings you have provided for some of the outlets below,</h2><br>
+  <h3> {{name1}}, Rating Given: {{rate1}}</h3>
+  <h3> {{name2}}, Rating Given: {{rate2}}</h3>
+  <h3> {{name3}}, Rating Given: {{rate3}}</h3>
+  <h3> {{name4}}, Rating Given: {{rate4}}</h3>
+  <h3> {{name5}}, Rating Given: {{rate5}}</h3>
+  <br>
+  <br>
+  <h1>We recommend these top 3 for you to check out!</h1>
+  {% set first_url =  first %}
+  {% set second_url =  second %}
+  {% set third_url =   third %}
+    <h1>Top: <a href={{first_url}} target="_blank">{{first}}</a></h1>
+    <h2>2nd: <a href={{second_url}} target="_blank">{{second}}</a></h2>
+    <h3>3rd: <a href={{third_url}} target="_blank">{{third}}</a></h3>
+    <a class="button" onClick="goBack()"><i class="fas fa-home"></i> Go Back to Home Page &amp; Try Again.</a>
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>

@@ -1,0 +1,113 @@
+<!doctype html>
+<title>Restaurant Recommendation For Users</title>
+
+<div class=page>
+  <h1>Restaurant Recommendation For Users (based on TripAdvisor)</h1>
+  <br>
+  <h3>Please rating from 1 to 5</h3>
+
+  <h3>Please rate at least 5 restaurants.</h3>
+  {% block body %}
+    <form name="passdata" action="." method="post">
+      <fieldset>
+        <legend>Let's begin!</legend>
+        <p>
+          <label for="name1">Choose an restaurant</label>
+          <select id = "name1" name="name1">
+            {% for name in list %}
+              <option value = {{name}}>{{name}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate1">Rate it</label>
+          <select id = "rate1" name="rate1">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <label for="name2">Choose an restaurant</label>
+          <select id = "name2" name="name2">
+            {% for name in list %}
+              <option value = {{name}}>{{name}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate2">Rate it</label>
+          <select id = "rate2" name="rate2">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <label for="name3">Choose an restaurant</label>
+          <select id = "name3" name="name3">
+            {% for name in list %}
+              <option value = {{name}}>{{name}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate3">Rate it</label>
+          <select id = "rate3" name="rate3">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <label for="name4">Choose an restaurant</label>
+          <select id = "name4" name="name4">
+            {% for ,name in list %}
+              <option value = {{name}}>{{name}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate4">Rate it</label>
+          <select id = "rate4" name="rate4">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <label for="name5">Choose an restaurant</label>
+          <select id = "name5" name="name5">
+            {% for name in list %}
+              <option value = {{name}}>{{name}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate5">Rate it</label>
+          <select id = "rate5" name="rate5">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <input type="submit" value="Submit">
+        </p>
+      </fieldset>
+    </form>
+    <body>
+      <h1>Check out the tripAdvisor pages of some of these restaurants before rating them!</h1>
+      <table style="width:100%">
+        <tr>
+          <th>Restaurant Links</th>
+        </tr>
+        {% for k, v in url_alias %}
+          <tr>
+            <td><a href={{k}} target="_blank">{{v}}</a></td>
+          </tr>
+        {% endfor %}
+      </table>
+    </body>
+  {% endblock %}
+</div>
